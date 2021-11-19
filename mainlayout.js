@@ -11,6 +11,8 @@ import {
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 
+// import layout from './styles';
+
 export default function mainlayout({ navigation }) {
     const pressHandler = () => {
         navigation.navigate('login');
@@ -19,14 +21,14 @@ export default function mainlayout({ navigation }) {
     return (
             <NativeBaseProvider>
                 <Box>
-                    <Box style={{ backgroundColor : 'yellow', height : '40%' }}>
+                    {/* <Box style={{ backgroundColor : 'yellow', height : '40%' }}> */}
                         <HStack>
                             <Icon name="bars" size={30} color="#333" />
                             <Icon name="search" size={30} color="#333" style={{marginLeft : '80%'}}></Icon>
                             <Icon name="bell" size={30} color="#333"></Icon>
                         </HStack>
-                        <Text>TEST MESSAGE</Text>
-                   </Box>
+                        <Text style={layout.textlayout}>안녕하세용</Text>
+                   {/* </Box> */}
 
                     <Box>
                         <View>
