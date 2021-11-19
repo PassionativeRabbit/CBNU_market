@@ -25,6 +25,7 @@ export default function mainlayout({ navigation }) {
                             <Icon name="search" size={30} color="#333" style={{marginLeft : '80%'}}></Icon>
                             <Icon name="bell" size={30} color="#333"></Icon>
                         </HStack>
+                        <Text>TEST MESSAGE</Text>
                    </Box>
 
                     <Box>
