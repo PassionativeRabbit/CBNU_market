@@ -10,6 +10,7 @@ import {
 } from 'native-base';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {layout} from './styles';
 
 // import layout from './styles';
 
@@ -27,7 +28,7 @@ export default function mainlayout({ navigation }) {
                             <Icon name="search" size={30} color="#333" style={{marginLeft : '80%'}}></Icon>
                             <Icon name="bell" size={30} color="#333"></Icon>
                         </HStack>
-                        <Text style={layout.textlayout}>안녕하세용</Text>
+                        <Text style={layout.textLayout}>안녕하세용</Text>
                    {/* </Box> */}
 
                     <Box>

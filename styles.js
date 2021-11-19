@@ -1,8 +1,8 @@
 import { StyleSheet } from 'react-native';
 
 
-const layout = StyleSheet.create({
-    textlayout: {
+export const layout = StyleSheet.create({
+    textLayout: {
         fontSize: 30,
         maraginTop: 100,
     },
