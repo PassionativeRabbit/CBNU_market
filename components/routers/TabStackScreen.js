@@ -9,6 +9,7 @@ import MyPageScreen from '../screens/MyPageScreen';
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
+import MenuButton from './MenuButton';
 
 const Tab = createBottomTabNavigator();
 
@@ -29,7 +30,9 @@ const HomeStackScreen = ({navigation}) => {
             <HomeStack.Screen
                 name="homecontainer"
                 component={HomeScreen}
-                options={{}}    
+                options={{
+                    headerLeft: () => <MenuButton />
+                }}    
             ></HomeStack.Screen>
         </HomeStack.Navigator>
     );
@@ -42,7 +45,9 @@ const SearchStackScreen = ({navigation}) => {
             <SearchStack.Screen
                 name="searchcontainer"
                 component={SearchScreen}
-                options={{}}
+                options={{
+                    headerLeft: () => <MenuButton />
+                }}    
             ></SearchStack.Screen>
         </SearchStack.Navigator>
     );
@@ -55,7 +60,9 @@ const ShopStackScreen = ({navigation}) => {
             <ShopStack.Screen
                 name="shopcontainer"
                 component={ShopScreen}
-                options={{}}
+                options={{
+                    headerLeft: () => <MenuButton />
+                }}    
             >
             </ShopStack.Screen>
         </ShopStack.Navigator>
@@ -69,7 +76,9 @@ const ChatListStackScreen = ({navigation}) => {
             <ChatListStack.Screen
                 name="chatlistcontainer"
                 component={ChatListScreen}
-                options={{}}
+                options={{
+                    headerLeft: () => <MenuButton />
+                }}    
             >
             </ChatListStack.Screen>
         </ChatListStack.Navigator>
@@ -83,7 +92,9 @@ const MyPageStackScreen = ({navigation}) => {
             <MyPageStack.Screen
                 name="mypagecontainer"
                 component={MyPageScreen}
-                options={{}}
+                options={{
+                    headerLeft: () => <MenuButton />
+                }}    
             >
             </MyPageStack.Screen>
         </MyPageStack.Navigator>
