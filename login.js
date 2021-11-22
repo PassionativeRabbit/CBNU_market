@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import {StyleSheet, View, Text, LayoutAnimation, TouchableOpacity, } from 'react-native';
 import {Dimensions,} from "react-native"
@@ -22,3 +23,4 @@ export default function mainlayout({ navigation }) {
     )
 
 }
+*/
