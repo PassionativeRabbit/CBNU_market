@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../screens/HomeScreen';
@@ -10,6 +11,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import MenuButton from './MenuButton';
+import HeaderRightButton from './HeaderRightButton';
+import AlarmListScreen from '../screens/AlarmListScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -35,9 +38,10 @@ const HomeStackScreen = ({navigation}) => {
                 name="homecontainer"
                 component={HomeScreen}
                 options={{
-                    headerLeft: () => <MenuButton />
-                }}    
-            ></HomeStack.Screen>
+                    headerLeft: () => <MenuButton />,
+                    headerRight: () => <HeaderRightButton />,
+                }}>
+                </HomeStack.Screen>
         </HomeStack.Navigator>
     );
 };
@@ -53,7 +57,8 @@ const SearchStackScreen = ({navigation}) => {
                 name="searchcontainer"
                 component={SearchScreen}
                 options={{
-                    headerLeft: () => <MenuButton />
+                    headerLeft: () => <MenuButton />,
+                    headerRight: () => <HeaderRightButton />,
                 }}    
             ></SearchStack.Screen>
         </SearchStack.Navigator>
@@ -71,7 +76,8 @@ const ShopStackScreen = ({navigation}) => {
                 name="shopcontainer"
                 component={ShopScreen}
                 options={{
-                    headerLeft: () => <MenuButton />
+                    headerLeft: () => <MenuButton />,
+                    headerRight: () => <HeaderRightButton />,
                 }}    
             >
             </ShopStack.Screen>
@@ -90,7 +96,8 @@ const ChatListStackScreen = ({navigation}) => {
                 name="chatlistcontainer"
                 component={ChatListScreen}
                 options={{
-                    headerLeft: () => <MenuButton />
+                    headerLeft: () => <MenuButton />,
+                    headerRight: () => <HeaderRightButton />,
                 }}    
             >
             </ChatListStack.Screen>
@@ -99,7 +106,7 @@ const ChatListStackScreen = ({navigation}) => {
 };
 
 const MyPageStack = createStackNavigator();
-const MyPageStackScreen = ({navigation}) => {
+export const MyPageStackScreen = ({navigation}) => {
     return (
         <MyPageStack.Navigator
             screenOptions={{
@@ -109,7 +116,17 @@ const MyPageStackScreen = ({navigation}) => {
                 name="mypagecontainer"
                 component={MyPageScreen}
                 options={{
-                    headerLeft: () => <MenuButton />
+                    headerLeft: () => <MenuButton />,
+                    headerRight: () => <HeaderRightButton />,
+                }}    
+            >
+            </MyPageStack.Screen>
+            <MyPageStack.Screen
+                name="alarmlistcontainer"
+                component={AlarmListScreen}
+                options={{
+                    headerLeft: () => <MenuButton />,
+                    headerRight: () => <HeaderRightButton />,
                 }}    
             >
             </MyPageStack.Screen>
