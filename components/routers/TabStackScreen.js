@@ -26,7 +26,11 @@ const FeatherIconFrame = ({name, size, color}) => {
 const HomeStack = createStackNavigator();
 const HomeStackScreen = ({navigation}) => {
     return (
-        <HomeStack.Navigator>
+        <HomeStack.Navigator
+            screenOptions={{
+                headerTitleAlign: 'center',
+            }}
+        >
             <HomeStack.Screen
                 name="homecontainer"
                 component={HomeScreen}
@@ -41,7 +45,10 @@ const HomeStackScreen = ({navigation}) => {
 const SearchStack = createStackNavigator();
 const SearchStackScreen = ({navigation}) => {
     return (
-        <SearchStack.Navigator>
+        <SearchStack.Navigator
+            screenOptions={{
+                headerTitleAlign: 'center',
+            }}>
             <SearchStack.Screen
                 name="searchcontainer"
                 component={SearchScreen}
@@ -56,7 +63,10 @@ const SearchStackScreen = ({navigation}) => {
 const ShopStack = createStackNavigator();
 const ShopStackScreen = ({navigation}) => {
     return (
-        <ShopStack.Navigator>
+        <ShopStack.Navigator
+            screenOptions={{
+                headerTitleAlign: 'center',
+            }}>
             <ShopStack.Screen
                 name="shopcontainer"
                 component={ShopScreen}
@@ -72,7 +82,10 @@ const ShopStackScreen = ({navigation}) => {
 const ChatListStack = createStackNavigator();
 const ChatListStackScreen = ({navigation}) => {
     return (
-        <ChatListStack.Navigator>
+        <ChatListStack.Navigator
+            screenOptions={{
+                headerTitleAlign: 'center',
+            }}>
             <ChatListStack.Screen
                 name="chatlistcontainer"
                 component={ChatListScreen}
@@ -88,7 +101,10 @@ const ChatListStackScreen = ({navigation}) => {
 const MyPageStack = createStackNavigator();
 const MyPageStackScreen = ({navigation}) => {
     return (
-        <MyPageStack.Navigator>
+        <MyPageStack.Navigator
+            screenOptions={{
+                headerTitleAlign: 'center',
+            }}>
             <MyPageStack.Screen
                 name="mypagecontainer"
                 component={MyPageScreen}
@@ -106,8 +122,9 @@ const TabStackScreen = () => {
         <Tab.Navigator
             screenOptions={{
                 headerShown: false,
-                tabBarShowLabel: false
+                tabBarShowLabel: false,
             }}
+            initialRouteName="homestack"
         >
             <Tab.Screen 
                 name="homestack" 
