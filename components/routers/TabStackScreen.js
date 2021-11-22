@@ -176,7 +176,7 @@ const TabStackScreen = () => {
                 component={MyPageStackScreen} 
                 options={{
                     tabBarIcon: props => FeatherIconFrame({...props, name:'user'}),
-                }}    
+                }}  
             />
         </Tab.Navigator>
     );
