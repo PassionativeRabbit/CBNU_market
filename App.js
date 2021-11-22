@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import TabStackScreen from './components/routers/TabStackScreen';
 
 export default function App() {
   return (
-    <View>
-      <Text>HomeScreen</Text>
-    </View>
+    <NavigationContainer>
+      <TabStackScreen />
+    </NavigationContainer>
   );
 }
