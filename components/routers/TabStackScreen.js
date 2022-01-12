@@ -13,6 +13,8 @@ import { Feather } from '@expo/vector-icons';
 import MenuButton from './MenuButton';
 import HeaderRightButton from './HeaderRightButton';
 import AlarmListScreen from '../screens/AlarmListScreen';
+import LoginScreen from '../screens/LoginScreen';
+import SignupScreen from '../screens/SignupScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -59,7 +61,7 @@ const SearchStackScreen = ({navigation}) => {
                 options={{
                     headerLeft: () => <MenuButton />,
                     headerRight: () => <HeaderRightButton />,
-                }}    
+                }}
             ></SearchStack.Screen>
         </SearchStack.Navigator>
     );
@@ -78,7 +80,7 @@ const ShopStackScreen = ({navigation}) => {
                 options={{
                     headerLeft: () => <MenuButton />,
                     headerRight: () => <HeaderRightButton />,
-                }}    
+                }}
             >
             </ShopStack.Screen>
         </ShopStack.Navigator>
@@ -98,7 +100,7 @@ const ChatListStackScreen = ({navigation}) => {
                 options={{
                     headerLeft: () => <MenuButton />,
                     headerRight: () => <HeaderRightButton />,
-                }}    
+                }}
             >
             </ChatListStack.Screen>
         </ChatListStack.Navigator>
@@ -118,7 +120,7 @@ export const MyPageStackScreen = ({navigation}) => {
                 options={{
                     headerLeft: () => <MenuButton />,
                     headerRight: () => <HeaderRightButton />,
-                }}    
+                }}
             >
             </MyPageStack.Screen>
             <MyPageStack.Screen
@@ -127,12 +129,62 @@ export const MyPageStackScreen = ({navigation}) => {
                 options={{
                     headerLeft: () => <MenuButton />,
                     headerRight: () => <HeaderRightButton />,
-                }}    
+                }}
             >
             </MyPageStack.Screen>
         </MyPageStack.Navigator>
     );
 };
+
+const LoginStack = createStackNavigator();
+export const LoginStackScreen = ({navigation}) => {
+    return (
+        <LoginStack.Navigator
+            screenOptions={{
+                headerTitleAlign: 'center',
+            }}>
+            <LoginStack.Screen
+                name="logincontainer"
+                component={LoginScreen}
+                options={{
+                    headerLeft: () => <MenuButton />,
+                    headerRight: () => <HeaderRightButton />,
+                }}
+            >
+            </LoginStack.Screen>
+            <LoginStack.Screen
+                name="alarmlistcontainer"
+                component={AlarmListScreen}
+                options={{
+                    headerLeft: () => <MenuButton />,
+                    headerRight: () => <HeaderRightButton />,
+                }}
+            >
+            </LoginStack.Screen>
+        </LoginStack.Navigator>
+    );
+};
+
+const SignupStack=createStackNavigator();
+export const SignupStackScreen=({navigation})=>{
+    return(
+        <SignupStack.Navigator
+            screenOptions={{
+                headerTitleAlign:'center',
+            }}>
+        <SignupStack.Screen
+            name="signupcontainer"
+            component={SignupScreen}
+            options={{
+                headerLeft:()=> <MenuButton />,
+                headerRight:()=> <HeaderRightButton />,
+            }}
+        >
+       </SignupStack.Screen>
+       </SignupStack.Navigator>
+    );
+};
+
 
 const TabStackScreen = () => {
     return (
@@ -143,41 +195,58 @@ const TabStackScreen = () => {
             }}
             initialRouteName="homestack"
         >
-            <Tab.Screen 
-                name="homestack" 
-                component={HomeStackScreen} 
+            <Tab.Screen
+                name="homestack"
+                component={HomeStackScreen}
                 options={{
                     tabBarIcon: props => IonIconFrame({...props, name:'home-outline'}),
                 }}
             />
-            <Tab.Screen 
-                name="searchstack" 
-                component={SearchStackScreen} 
+            <Tab.Screen
+                name="searchstack"
+                component={SearchStackScreen}
                 options={{
                     tabBarIcon: props => IonIconFrame({...props, name:'search'}),
                 }}
             />
-            <Tab.Screen 
-                name="shopstack" 
-                component={ShopStackScreen} 
+            <Tab.Screen
+                name="shopstack"
+                component={ShopStackScreen}
                 options={{
                     tabBarIcon: props => MaterialIconFrame({...props, name:'storefront'}),
-                }}    
+                }}
             />
-            <Tab.Screen 
-                name="chatliststack" 
-                component={ChatListStackScreen} 
+            <Tab.Screen
+                name="chatliststack"
+                component={ChatListStackScreen}
                 options={{
                     tabBarIcon: props => IonIconFrame({...props, name: 'chatbubble-ellipses-outline'}),
                 }}
             />
-            <Tab.Screen 
-                name="mypagestack" 
-                component={MyPageStackScreen} 
+            <Tab.Screen
+                name="mypagestack"
+                component={MyPageStackScreen}
                 options={{
                     tabBarIcon: props => FeatherIconFrame({...props, name:'user'}),
-                }}  
+                }}
             />
+
+            <Tab.Screen
+                name="loginstack"
+                component={LoginStackScreen}
+                options={{
+                    tabBarIcon: props => FeatherIconFrame({...props, name:'user'}), //원래는 person-outline 하려고함
+                }}
+            />
+
+            <Tab.Screen
+                name="signupstack"
+                component={SignupStackScreen}
+                options={{
+                    tabBarIcon: props => FeatherIconFrame({...props, name:'user'}), //원래는 person-outline 하려고함
+                }}
+            />
+
         </Tab.Navigator>
     );
 };
