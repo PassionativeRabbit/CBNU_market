@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "281381768163",
+    "project_id": "cbnumarket-79cf2",
+    "storage_bucket": "cbnumarket-79cf2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281381768163:android:48fb6d45fa5ec34a4caed6",
+        "android_client_info": {
+          "package_name": "com.cbnu_market"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281381768163-g8bvq7f7cp859f4dg86cn6majn9jmofr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0GUxT-oAuQkz1hxTp_dnpU8WBmtK39jo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281381768163-g8bvq7f7cp859f4dg86cn6majn9jmofr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
