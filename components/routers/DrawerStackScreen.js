@@ -18,51 +18,6 @@ const CustomDrawer = ({navigation}) => {
 
     return (
         <DrawerContentScrollView>
-            {/* <DrawerItem
-                label="HOME"
-                onPress={() => goToStack('homestack')}
-                style={{
-                    borderBottomWidth:1,
-                    borderRadius:0,
-                    borderColor:'#ecf0f1'
-                }}
-            >
-            </DrawerItem>
-            <DrawerItem
-                label="Search"
-                onPress={() => goToStack('searchstack')}
-                style={{
-                    borderBottomWidth:1,
-                    borderRadius:0,
-                    borderColor:'#ecf0f1'
-                }}
-            >
-            </DrawerItem>
-            <DrawerItem
-                label="Shopping"
-                onPress={() => goToStack('shopstack')}
-                style={{
-                    borderBottomWidth:1,
-                    borderRadius:0,
-                    borderColor:'#ecf0f1'
-                }}
-            >
-            </DrawerItem>
-            <DrawerItem
-                label="Chatting"
-                onPress={() => goToStack('chatliststack')}
-                style={{
-                    borderBottomWidth:1,
-                    borderRadius:0,
-                    borderColor:'#ecf0f1'
-                }}
-            >
-            </DrawerItem>
-            <DrawerItem
-                label="My Page"
-                onPress={() => goToStack('mypagestack')}
-            >
-            </DrawerItem> */}
             <NativeBaseProvider>
 
                 <TouchableOpacity style={{flexDirection:'row-reverse'}}>
@@ -76,143 +31,135 @@ const CustomDrawer = ({navigation}) => {
                     />
                 </TouchableOpacity>
 
-                <Text style={{ marginTop: '10%', marginLeft: '5%' }}>인기 카테고리</Text>
-                <View style={{ marginTop: '5%', justifyContent:"center", alignItems:"center"}}> 
-                    <HStack space={5}>
-                        <View>
-                            <TouchableOpacity>
-                                <Image
-                                source={require('../assets/woman_cloth.png')}
-                                style={{width: 30, height: 30, }}
-                                alt="trans_1"
-                                />
-                                <Text>여성 의류</Text>
-                            </TouchableOpacity>
-                        </View>
-                        <View>
-                            <TouchableOpacity>
-                                <Image
-                                source={require('../assets/man_cloth.png')}
-                                style={{width: 30, height: 30, }}
-                                alt="trans_1"
-                                />
-                                <Text>남성 의류</Text>
-                            </TouchableOpacity>
-                        </View>
-                        <View>
-                            <TouchableOpacity>
-                                <Image
-                                source={require('../assets/book.png')}
-                                style={{width: 30, height: 30, }}
-                                alt="trans_1"
-                                />
-                                <Text>중고 서적</Text>
-                            </TouchableOpacity>
-                        </View>
-                        <View>
-                            <TouchableOpacity>
-                                <Image
-                                source={require('../assets/appliance.png')}
-                                style={{width: 30, height: 30, }}
-                                alt="trans_1"
-                                />
-                                <Text>가전 제품</Text>
-                            </TouchableOpacity>
-                        </View>
-                    </HStack>
-                </View>
+                <Text style={{ marginTop: '10%', textAlign:'center' }}>인기 카테고리</Text>
+                <Box style={{ marginTop: '5%', flexDirection: "row", justifyContent: 'space-between', marginLeft:'5%', marginRight:'5%'}}>
+                    <Box style={{ flexDirection: 'column', alignItems: 'center', justifyContent:'center', }}>
+                        <TouchableOpacity>
+                            <Image
+                            source={require('../assets/woman_cloth.png')}
+                            style={{width: 50, height: 50, }}
+                            alt="trans_1"
+                            />
+                            <Text style={{textAlign:'center'}}>여성 의류</Text>
+                        </TouchableOpacity>
+                    </Box>
+                    <Box style={{ flexDirection: 'column', alignItems: 'center', justifyContent:'center', }}>
+                        <TouchableOpacity>
+                            <Image
+                            source={require('../assets/man_cloth.png')}
+                            style={{width: 50, height: 50, }}
+                            alt="trans_1"
+                            />
+                            <Text style={{textAlign:'center'}}>남성 의류</Text>
+                        </TouchableOpacity>
+                    </Box>
+                    <Box style={{ flexDirection: 'column', alignItems: 'center', justifyContent:'center', }}>
+                        <TouchableOpacity>
+                            <Image
+                            source={require('../assets/book.png')}
+                            style={{width: 50, height: 50, }}
+                            alt="trans_1"
+                            />
+                            <Text style={{textAlign:'center'}}>중고 서적</Text>
+                        </TouchableOpacity>
+                    </Box>
+                    <Box style={{ flexDirection: 'column', alignItems: 'center', justifyContent:'center', }}>
+                        <TouchableOpacity>
+                            <Image
+                            source={require('../assets/appliance.png')}
+                            style={{width: 50, height: 50, }}
+                            alt="trans_1"
+                            />
+                            <Text style={{textAlign:'center'}}>가전 제품</Text>
+                        </TouchableOpacity>
+                    </Box>
+                </Box>
 
                 <Text style={{ marginTop: '30%', marginLeft: '5%' }}>전체 카테고리</Text>
-                <View style={{ marginTop: '5%', justifyContent:"center", alignItems:"center"}}> 
-                    <HStack space={5}>
-                        <View>
-                            <TouchableOpacity>
-                                <Image
-                                source={require('../assets/woman_cloth.png')}
-                                style={{width: 30, height: 30, }}
-                                alt="trans_1"
-                                />
-                                <Text>여성 의류</Text>
-                            </TouchableOpacity>
-                        </View>
-                        <View>
-                            <TouchableOpacity>
-                                <Image
-                                source={require('../assets/man_cloth.png')}
-                                style={{width: 30, height: 30, }}
-                                alt="trans_1"
-                                />
-                                <Text>남성 의류</Text>
-                            </TouchableOpacity>
-                        </View>
-                        <View>
-                            <TouchableOpacity>
-                                <Image
-                                source={require('../assets/book.png')}
-                                style={{width: 30, height: 30, }}
-                                alt="trans_1"
-                                />
-                                <Text>중고 서적</Text>
-                            </TouchableOpacity>
-                        </View>
-                        <View>
-                            <TouchableOpacity>
-                                <Image
-                                source={require('../assets/appliance.png')}
-                                style={{width: 30, height: 30, }}
-                                alt="trans_1"
-                                />
-                                <Text>가전 제품</Text>
-                            </TouchableOpacity>
-                        </View>
-                    </HStack>
-                </View>
-
-                <View style={{ marginTop: '5%', justifyContent:"center", alignItems:"center"}}> 
-                    <HStack space={5}>
-                        <View>
-                            <TouchableOpacity>
-                                <Image
-                                source={require('../assets/sports.png')}
-                                style={{width: 30, height: 30, }}
-                                alt="trans_1"
-                                />
-                                <Text>스포츠 용품</Text>
-                            </TouchableOpacity>
-                        </View>
-                        <View>
-                            <TouchableOpacity>
-                                <Image
-                                source={require('../assets/bag.png')}
-                                style={{width: 30, height: 30, }}
-                                alt="trans_1"
-                                />
-                                <Text>가방</Text>
-                            </TouchableOpacity>
-                        </View>
-                        <View>
-                            <TouchableOpacity>
-                                <Image
-                                source={require('../assets/digital.png')}
-                                style={{width: 30, height: 30, }}
-                                alt="trans_1"
-                                />
-                                <Text>디지털 제품</Text>
-                            </TouchableOpacity>
-                        </View>
-                        <View>
-                            <TouchableOpacity>
-                                <Image
-                                source={require('../assets/cap.png')}
-                                style={{width: 30, height: 30, }}
-                                alt="trans_1"
-                                />
-                                <Text>모자</Text>
-                            </TouchableOpacity>
-                        </View>
-                    </HStack>
-                </View>
-                
+                <Box style={{ marginTop: '5%', flexDirection: "row", justifyContent: 'space-between', marginLeft:'5%', marginRight:'5%'}}>
+                    <Box style={{ flexDirection: 'column', alignItems: 'center', justifyContent:'center', }}>
+                        <TouchableOpacity>
+                            <Image
+                            source={require('../assets/woman_cloth.png')}
+                            style={{width: 50, height: 50, }}
+                            alt="trans_1"
+                            />
+                            <Text style={{textAlign:'center'}}>여성 의류</Text>
+                        </TouchableOpacity>
+                    </Box>
+                    <Box style={{ flexDirection: 'column', alignItems: 'center', justifyContent:'center', }}>
+                        <TouchableOpacity>
+                            <Image
+                            source={require('../assets/man_cloth.png')}
+                            style={{width: 50, height: 50, }}
+                            alt="trans_1"
+                            />
+                            <Text style={{textAlign:'center'}}>남성 의류</Text>
+                        </TouchableOpacity>
+                    </Box>
+                    <Box style={{ flexDirection: 'column', alignItems: 'center', justifyContent:'center', }}>
+                        <TouchableOpacity>
+                            <Image
+                            source={require('../assets/book.png')}
+                            style={{width: 50, height: 50, }}
+                            alt="trans_1"
+                            />
+                            <Text style={{textAlign:'center'}}>중고 서적</Text>
+                        </TouchableOpacity>
+                    </Box>
+                    <Box style={{ flexDirection: 'column', alignItems: 'center', justifyContent:'center', }}>
+                        <TouchableOpacity>
+                            <Image
+                            source={require('../assets/appliance.png')}
+                            style={{width: 50, height: 50, }}
+                            alt="trans_1"
+                            />
+                            <Text style={{textAlign:'center'}}>가전 제품</Text>
+                        </TouchableOpacity>
+                    </Box>
+                </Box>
+                <Box style={{ marginTop: '5%', flexDirection: "row", justifyContent: 'space-between', marginLeft:'5%', marginRight:'5%'}}>
+                    <Box style={{ flexDirection: 'column', alignItems: 'center', justifyContent:'center', }}>
+                        <TouchableOpacity>
+                            <Image
+                            source={require('../assets/sports.png')}
+                            style={{width: 50, height: 50, }}
+                            alt="trans_1"
+                            />
+                            <Text style={{textAlign:'center'}}>스포츠 용품</Text>
+                        </TouchableOpacity>
+                    </Box>
+                    <Box style={{ flexDirection: 'column', alignItems: 'center', justifyContent:'center', }}>
+                        <TouchableOpacity>
+                            <Image
+                            source={require('../assets/bag.png')}
+                            style={{width: 50, height: 50, }}
+                            alt="trans_1"
+                            />
+                            <Text style={{textAlign:'center'}}>가방</Text>
+                        </TouchableOpacity>
+                    </Box>
+                    <Box style={{ flexDirection: 'column', alignItems: 'center', justifyContent:'center', }}>
+                        <TouchableOpacity>
+                            <Image
+                            source={require('../assets/digital.png')}
+                            style={{width: 50, height: 50, }}
+                            alt="trans_1"
+                            />
+                            <Text style={{textAlign:'center'}}>디지털 제품</Text>
+                        </TouchableOpacity>
+                    </Box>
+                    <Box style={{ flexDirection: 'column', alignItems: 'center', justifyContent:'center', }}>
+                        <TouchableOpacity>
+                            <Image
+                            source={require('../assets/cap.png')}
+                            style={{width: 50, height: 50, }}
+                            alt="trans_1"
+                            />
+                            <Text style={{textAlign:'center'}}>모자</Text>
+                        </TouchableOpacity>
+                    </Box>
+                </Box>
             </NativeBaseProvider>
         </DrawerContentScrollView>
     );

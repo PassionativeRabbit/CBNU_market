@@ -14,9 +14,15 @@ import IconA from 'react-native-vector-icons/AntDesign';
 import IconM from 'react-native-vector-icons/MaterialIcons';
 import IconE from 'react-native-vector-icons/Entypo';
 
-import profile from '../assets/profile.png'
+import profile from '../assets/profile.png';
+import { useNavigation } from '@react-navigation/core';
 
 const MyPageScreen = () => {
+    const navigation = useNavigation();
+    const goToStack = (stackName) => {
+        navigation.navigate(stackName);
+    };
+
     return (
         <NativeBaseProvider>
             <ScrollView style={{backgroundColor:'white'}}>
@@ -49,7 +55,7 @@ const MyPageScreen = () => {
                 </Box>
                 
                 <Box style={{ marginTop: '10%', marginLeft: '10%', marginRight: '10%', flexDirection:'column'}}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => goToStack('ModifyAccountStack')}>
                         <Box style={{ flexDirection: 'row', alignContent: 'center', alignItems: 'center' }}>
                             <IconM name="navigate-before" size={25} style={{ justifyContent: 'center', textAlign: 'center' }}></IconM>
                             <Text fontSize={16} style={{justifyContent:'center', textAlign:'center'}}>회원 정보 수정</Text>
