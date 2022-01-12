@@ -15,6 +15,7 @@ import HeaderRightButton from './HeaderRightButton';
 import AlarmListScreen from '../screens/AlarmListScreen';
 import LoginScreen from '../screens/LoginScreen';
 import SignupScreen from '../screens/SignupScreen';
+import RegisterGoodsScreen from '../screens/RegisterGoodsScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -165,7 +166,7 @@ export const LoginStackScreen = ({navigation}) => {
     );
 };
 
-const SignupStack=createStackNavigator();
+const SignupStack = createStackNavigator();
 export const SignupStackScreen=({navigation})=>{
     return(
         <SignupStack.Navigator
@@ -182,6 +183,26 @@ export const SignupStackScreen=({navigation})=>{
         >
        </SignupStack.Screen>
        </SignupStack.Navigator>
+    );
+};
+
+const RegisterGoodsStack = createStackNavigator();
+export const RegisterGoodsStackScreen=({navigation})=>{
+    return(
+        <RegisterGoodsStack.Navigator
+            screenOptions={{
+                headerTitleAlign:'center',
+            }}>
+        <RegisterGoodsStack.Screen
+            name="registergoodscontainer"
+            component={RegisterGoodsScreen}
+            options={{
+                headerLeft:()=> <MenuButton />,
+                headerRight:()=> <HeaderRightButton />,
+            }}
+        >
+       </RegisterGoodsStack.Screen>
+       </RegisterGoodsStack.Navigator>
     );
 };
 
@@ -244,6 +265,14 @@ const TabStackScreen = () => {
                 component={SignupStackScreen}
                 options={{
                     tabBarIcon: props => FeatherIconFrame({...props, name:'user'}), //원래는 person-outline 하려고함
+                }}
+            />
+
+            <Tab.Screen
+                name="registergoodsstack"
+                component={RegisterGoodsStackScreen}
+                options={{
+                    tabBarIcon: props => FeatherIconFrame({...props, name:'user'}),
                 }}
             />
 
