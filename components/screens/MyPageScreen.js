@@ -62,10 +62,10 @@ const MyPageScreen = () => {
                         </Box>
                     </TouchableOpacity>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => goToStack('TransactionDetailStack')}>
                         <Box style={{ flexDirection: 'row', alignContent: 'center', alignItems: 'center', marginTop:'5%' }}>
                             <IconM name="navigate-before" size={25} style={{ justifyContent: 'center', textAlign: 'center' }}></IconM>
-                            <Text fontSize={16} style={{justifyContent:'center', textAlign:'center'}}>주문 내역</Text>
+                            <Text fontSize={16} style={{justifyContent:'center', textAlign:'center'}}>거래 내역</Text>
                         </Box>
                     </TouchableOpacity>
 
