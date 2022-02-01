@@ -230,9 +230,17 @@ const TabStackScreen = () => {
                     tabBarIcon: props => IonIconFrame({...props, name:'search'}),
                 }}
             />
-            <Tab.Screen
+            {/* <Tab.Screen
                 name="shopstack"
                 component={ShopStackScreen}
+                options={{
+                    tabBarIcon: props => MaterialIconFrame({...props, name:'storefront'}),
+                }}
+            /> */}
+            
+            <Tab.Screen
+                name="registergoodsstack"
+                component={RegisterGoodsStackScreen}
                 options={{
                     tabBarIcon: props => MaterialIconFrame({...props, name:'storefront'}),
                 }}
@@ -265,14 +273,6 @@ const TabStackScreen = () => {
                 component={SignupStackScreen}
                 options={{
                     tabBarIcon: props => FeatherIconFrame({...props, name:'user'}), //원래는 person-outline 하려고함
-                }}
-            />
-
-            <Tab.Screen
-                name="registergoodsstack"
-                component={RegisterGoodsStackScreen}
-                options={{
-                    tabBarIcon: props => FeatherIconFrame({...props, name:'user'}),
                 }}
             />
 
