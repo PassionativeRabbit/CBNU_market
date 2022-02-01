@@ -250,14 +250,6 @@ const TabStackScreen = () => {
             /> 
             
             <Tab.Screen
-                name="registergoodsstack"
-                component={RegisterGoodsStackScreen}
-                options={{
-                    tabBarIcon: props => MaterialIconFrame({...props, name:'storefront'}),
-                }}
-            />
-
-            <Tab.Screen
                 name="chatliststack"
                 component={ChatListStackScreen}
                 options={{
