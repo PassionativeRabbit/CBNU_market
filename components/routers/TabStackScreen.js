@@ -16,6 +16,7 @@ import AlarmListScreen from '../screens/AlarmListScreen';
 import LoginScreen from '../screens/LoginScreen';
 import SignupScreen from '../screens/SignupScreen';
 import RegisterGoodsScreen from '../screens/RegisterGoodsScreen';
+import TransactionDetailsScreen from '../screens/TransactionDetailsScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -133,9 +134,18 @@ export const MyPageStackScreen = ({navigation}) => {
                 }}
             >
             </MyPageStack.Screen>
+            <MyPageStack.Screen
+                name="transactiondetailscontainer"
+                component={TransactionDetailsScreen}
+                options={{
+                    headerLeft:()=> <MenuButton />,
+                    headerRight:()=> <HeaderRightButton />,
+                }}>
+            </MyPageStack.Screen>
         </MyPageStack.Navigator>
     );
 };
+
 
 const LoginStack = createStackNavigator();
 export const LoginStackScreen = ({navigation}) => {
@@ -230,13 +240,14 @@ const TabStackScreen = () => {
                     tabBarIcon: props => IonIconFrame({...props, name:'search'}),
                 }}
             />
-            {/* <Tab.Screen
-                name="shopstack"
-                component={ShopStackScreen}
+
+            <Tab.Screen
+                name="registergoodsstack"
+                component={RegisterGoodsStackScreen}
                 options={{
-                    tabBarIcon: props => MaterialIconFrame({...props, name:'storefront'}),
+                    tabBarIcon: props => FeatherIconFrame({...props, name:'plus'}),
                 }}
-            /> */}
+            /> 
             
             <Tab.Screen
                 name="registergoodsstack"
@@ -245,6 +256,7 @@ const TabStackScreen = () => {
                     tabBarIcon: props => MaterialIconFrame({...props, name:'storefront'}),
                 }}
             />
+
             <Tab.Screen
                 name="chatliststack"
                 component={ChatListStackScreen}
@@ -275,6 +287,8 @@ const TabStackScreen = () => {
                     tabBarIcon: props => FeatherIconFrame({...props, name:'user'}), //원래는 person-outline 하려고함
                 }}
             />
+
+            
 
         </Tab.Navigator>
     );
